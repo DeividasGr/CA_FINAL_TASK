@@ -71,6 +71,9 @@ class RegisterForm extends Form
                     'phone_number' => [
                         'label' => 'Phone Number',
                         'type' => 'text',
+                        'validators' => [
+                            'validate_numeric',
+                        ],
                         'extra' => [
                             'attr' => [
                                 'placeholder' => 'Phone Number',

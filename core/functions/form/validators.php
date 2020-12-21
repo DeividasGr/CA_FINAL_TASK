@@ -96,12 +96,10 @@ function validate_field_range(string $field_value, array &$field, array $params)
  */
 function validate_numeric(string $field_value, array &$field): bool
 {
-    if (!is_numeric($field_value)) {
+    if (!is_numeric($field_value) && strlen($field_value) > 0) {
         $field['error'] = 'Field input must be numeric';
-
         return false;
     };
-
     return true;
 }
 
@@ -172,21 +170,22 @@ function validate_nickname_max_50(string $field_value, array &$field)
 
 function validate_no_symbols_numbers(string $field_value, array &$field)
 {
-//    if (preg_match('~^[\p{L}\p{Z}]+$~u', $field_value)) {
-//        $field['error'] = 'Your first or last name cannot contain numbers or symbols';
-//        return false;
-//    }
-//    return true;
+    if (!preg_match('/^[_A-z]*((-|\s)*[_A-z])*$/', $field_value)) {
+        $field['error'] = 'Your first or last name cannot contain numbers or symbols';
+        return false;
+    }
+    return true;
 
 }
 
 function validate_name_length(string $field_value, array &$field)
 {
     if (strlen($field_value) > 40) {
-        return true;
-    }
-    $field['error'] = 'Your first or last name cannot contain numbers or symbols';
-    return false;
+        $field['error'] = 'Too many symbols - use up to 40';
 
+        return false;
+    }
+
+    return true;
 
 }

@@ -15,5 +15,8 @@
 <main>
     <?php print $data['content']; ?>
 </main>
+<footer class="footer">
+    <?php print $data['footer']; ?>
+</footer>
 </body>
 </html>

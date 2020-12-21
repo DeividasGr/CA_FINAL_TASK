@@ -45,8 +45,6 @@ function validate_login(array $filtered_input, array &$form): bool
         return true;
     }
 
-    $form['error'] = 'Incorrect';
-
     return false;
 }
 
@@ -59,4 +57,31 @@ function validate_row_exists(string $field_input, array &$field): bool
     $field['error'] = 'Tokia eilute neegzistuoja';
 
     return false;
+}
+
+function validate_user_doesnt_exists(string $field_input, array &$field): bool
+{
+    if (!App::$db->getRowWhere('users', ['email' => $field_input])) {
+        $field['error'] = 'User with that email doesnt exist';
+
+        return false;
+    }
+
+    return true;
+}
+
+/**
+ * Checks if email user exists and if it's password is correct
+ *
+ * @param string $field_input
+ * @param array $field
+ * @return bool
+ */
+function validate_correct_password(string $field_input, array &$field): bool
+{
+    if (!App::$db->getRowWhere('users', ['password' => $field_input])) {
+        $field['error'] = 'Password is incorrect';
+        return false;
+    }
+    return true;
 }
