@@ -3,19 +3,28 @@
     <h1 class="title"><?php print $data['title'] ?></h1>
     <div class="content-container">
         <div class="content-list">
-            <img src="/media/images/Arena-GYM.png" alt="">
-            <h3>Lorum ipsum</h3>
-            <p>kasdgkahsdkjasdkbasdk</p>
+            <img src="/media/images/gym.jpg" alt="">
+            <h3>Best Gym</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum leo lectus,
+                malesuada vitae nunc nec, commodo condimentum ipsum.
+                Duis aliquet enim a velit interdum bibendum sit amet quis justo.
+            </p>
         </div>
         <div class="content-list">
-            <img src="/media/images/Arena-GYM.png" alt="">
-            <h3>Lorum ipsum</h3>
-            <p>kasdgkahsdkjasdkbasdk</p>
+            <img src="/media/images/spa.jpg" alt="">
+            <h3>Spa after training</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum leo lectus,
+                malesuada vitae nunc nec, commodo condimentum ipsum.
+                Duis aliquet enim a velit interdum bibendum sit amet quis justo.
+            </p>
         </div>
         <div class="content-list">
-            <img src="/media/images/Arena-GYM.png" alt="">
-            <h3>Lorum ipsum</h3>
-            <p>kasdgkahsdkjasdkbasdk</p>
+            <img src="/media/images/bar.jpg" alt="">
+            <h3>Replenish your strength</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum leo lectus,
+                malesuada vitae nunc nec, commodo condimentum ipsum.
+                Duis aliquet enim a velit interdum bibendum sit amet quis justo.
+            </p>
         </div>
     </div>
 </section>
