@@ -15,23 +15,29 @@ class Navigation extends View
 
     public function generate()
     {
-        $nav = [App::$router::getUrl('index') => 'Home',
-            App::$router::getUrl('reviews') => 'Reviews',];
-
+        $nav = [
+            'left' => [
+                App::$router::getUrl('index') => 'Home',
+                App::$router::getUrl('about-us') => 'About us',
+            ]
+        ];
         if (App::$session->getUser()) {
             return $nav + [
-                    App::$router::getUrl('logout') => 'Logout'
-                ];
-        } else {
-            return $nav + [
-                    App::$router::getUrl('register') => 'Register',
-                    App::$router::getUrl('login') => 'Login'
+                    'right' => [
+                        App::$router::getUrl('logout') => 'Logout',
+                    ]
                 ];
         }
+        return $nav + [
+                'right' => [
+                    App::$router::getUrl('register') => 'Register',
+                    App::$router::getUrl('login') => 'Login',
+                ]
+            ];
     }
 
     public
-    function render($template_path = ROOT . '/app/templates/nav.php')
+    function render($template_path = ROOT . '/app/templates/nav.tpl.php')
     {
         return parent::render($template_path);
     }

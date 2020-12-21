@@ -12,14 +12,15 @@ public function __construct()
         'fields' => [
             'email' => [
                 'label' => 'Email',
-                'type' => 'text',
+                'type' => 'email',
                 'validators' => [
                     'validate_field_not_empty',
                     'validate_email',
                 ],
                 'extra' => [
                     'attr' => [
-                        'placeholder' => 'Įvesk emailą',
+                        'placeholder' => 'Enter your email',
+                        'class' => 'field-input'
                     ],
                 ],
             ],
@@ -31,7 +32,8 @@ public function __construct()
                 ],
                 'extra' => [
                     'attr' => [
-                        'placeholder' => 'Įvesk slaptažodį',
+                        'placeholder' => 'Enter your password',
+                        'class' => 'field-input'
                     ],
                 ],
             ],

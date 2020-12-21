@@ -16,7 +16,7 @@ use App\App;
 function validate_user_unique(string $field_input, array &$field): bool
 {
     if (App::$db->getRowWhere('users', ['email' => $field_input])) {
-        $field['error'] = 'User already exists';
+        $field['error'] = 'User with that email already exists';
 
         return false;
     }

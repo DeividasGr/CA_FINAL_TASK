@@ -4,28 +4,28 @@
 // [1] FORM VALIDATORS
 // //////////////////////////////
 
-/**
- * Check if field values are the same
- *
- * @param $form_values
- * @param array $form
- * @param array $params
- * @return bool
- */
-function validate_fields_match($form_values, array &$form, array $params): bool
-{
-    foreach ($params as $field_index) {
-        if ($form_values[$params[0]] !== $form_values[$field_index]) {
-            $form['fields'][$field_index]['error'] = strtr('Field does not match with @field field', [
-                '@field' => $form['fields'][$params[0]]['label']
-            ]);
-
-            return false;
-        }
-    }
-
-    return true;
-}
+///**
+// * Check if field values are the same
+// *
+// * @param $form_values
+// * @param array $form
+// * @param array $params
+// * @return bool
+// */
+//function validate_fields_match($form_values, array &$form, array $params): bool
+//{
+//    foreach ($params as $field_index) {
+//        if ($form_values[$params[0]] !== $form_values[$field_index]) {
+//            $form['fields'][$field_index]['error'] = strtr('Field does not match with @field field', [
+//                '@field' => $form['fields'][$params[0]]['label']
+//            ]);
+//
+//            return false;
+//        }
+//    }
+//
+//    return true;
+//}
 
 // //////////////////////////////
 // [2] FIELD VALIDATORS
@@ -40,7 +40,6 @@ function validate_fields_match($form_values, array &$form, array $params): bool
  */
 function validate_field_not_empty(string $field_value, array &$field): bool
 {
-
     if ($field_value == '') {
         $field['error'] = 'Field must be filled';
         return false;
@@ -135,7 +134,7 @@ function validate_select(string $field_input, array &$field): bool
 function validate_email(string $field_value, array &$field): bool
 {
     if (!preg_match('/[-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+.[a-zA-Z]{2,4}/', $field_value)) {
-        $field['error'] = 'Invalid email format';
+        $field['error'] = 'There is something wrong with your email format';
 
         return false;
     }
@@ -159,4 +158,35 @@ function validate_url(string $field_value, array &$field): bool
     };
 
     return true;
+}
+
+function validate_nickname_max_50(string $field_value, array &$field)
+{
+    if (strlen($field_value) <= 50 && strlen($field_value) >= 5) {
+        return true;
+    } else {
+        $field['error'] = 'Need more symbols';
+        return false;
+    }
+}
+
+function validate_no_symbols_numbers(string $field_value, array &$field)
+{
+//    if (preg_match('~^[\p{L}\p{Z}]+$~u', $field_value)) {
+//        $field['error'] = 'Your first or last name cannot contain numbers or symbols';
+//        return false;
+//    }
+//    return true;
+
+}
+
+function validate_name_length(string $field_value, array &$field)
+{
+    if (strlen($field_value) > 40) {
+        return true;
+    }
+    $field['error'] = 'Your first or last name cannot contain numbers or symbols';
+    return false;
+
+
 }

@@ -13,23 +13,10 @@ class HomeController
 {
     protected $page;
 
-    /**
-     * Controller constructor.
-     *
-     * We can write logic common for all
-     * other methods
-     *
-     * For example, create $page object,
-     * set it's header/navigation
-     * or check if user has a proper role
-     *
-     * Goal is to prepare $page
-     */
     public function __construct()
     {
         $this->page = new BasePage([
-            'title' => 'Pizzas',
-            'js' => ['/media/js/home.js']
+            'title' => 'Health & Fitness'
         ]);
     }
 
@@ -43,34 +30,14 @@ class HomeController
     {
         $user = App::$session->getUser();
 
-        if ($user) {
-            if ($user['role'] == 'admin') {
-                $forms = [
-                    'create' => (new PizzaCreateForm())->render(),
-                    'update' => (new PizzaUpdateForm())->render()
-                ];
-            }
-
-            $heading = "Zdarova, {$user['user_name']}";
-            $links = [
-                'login' => (new Link([
-                    'url' => App::$router::getUrl('logout'),
-                    'text' => 'Logout'
-                ]))->render()
-            ];
-        } else {
-            $heading = 'Jus neprisijunges';
-            $links = [
-                'login' => (new Link([
-                    'url' => App::$router::getUrl('login'),
-                    'text' => 'Login'
-                ]))->render()
-            ];
-        }
+//        if ($user) {
+//            $heading = "Zdarova, {$user['user_name']}";
+//        } else {
+//            $heading = 'Jus neprisijunges';
+//        }
 
         $content = (new View([
-            'title' => 'Welcome to our pizzaria',
-            'heading' => $heading,
+            'title' => 'Unleash your inner athlete',
             'forms' => $forms ?? [],
             'links' => $links ?? []
         ]))->render(ROOT . '/app/templates/content/index.tpl.php');
