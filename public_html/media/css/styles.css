@@ -22,8 +22,11 @@ body {
 }
 
 table, th, td {
+    margin: 0 auto;
     border: 1px solid black;
     border-collapse: collapse;
+    max-width: 300px;
+    word-wrap: break-word;
 }
 
 tr, td, th {
@@ -42,9 +45,16 @@ form {
     background-color: #333;
     padding: 20px;
 }
-
+#review-create-form {
+    margin: 25px auto;
+}
+.textarea {
+    width: 100%;
+}
 form p {
     font-weight: bold;
+    margin-bottom: 10px;
+    color: #fff;
 }
 
 label {
@@ -65,7 +75,7 @@ button {
     margin: 5px;
     background-color: #333;
     color: white;
-    width: 100%;
+    width: 250px;
     border: 2px solid white;
     cursor: pointer;
 }
@@ -161,15 +171,6 @@ a:hover {
     height: 300px;
 }
 
-#pizza-grid-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 20px;
-    align-content: center;
-    justify-items: center;
-    margin: 0 auto;
-}
-
 .content-container {
     max-width: 800px;
     margin: 20px auto;
@@ -199,30 +200,6 @@ a:hover {
 .content-list p {
     text-align: center;
     margin: 0 5px;
-}
-
-#pizza-grid-container .data-item {
-    display: flex;
-    width: 250px;
-    height: 400px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid gray;
-    padding: 5px;
-}
-
-#pizza-grid-container img {
-    width: 250px;
-    height: 250px;
-    object-fit: cover;
-    transition: 0.5s ease-in-out;
-    border-radius: 100%;
-    margin: 15px;
-}
-
-#pizza-grid-container img:hover {
-    transform: scale(1.1);
 }
 
 /*######################
