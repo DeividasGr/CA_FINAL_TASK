@@ -11,26 +11,28 @@ class RegisterForm extends Form
         parent::__construct([
             'fields' => [
                 'first_name' => [
-                    'label' => 'Name',
+                    'label' => 'First Name',
                     'type' => 'text',
                     'validators' => [
                         'validate_field_not_empty',
                     ],
                     'extra' => [
                         'attr' => [
-                            'placeholder' => 'Enter your full name',
+                            'placeholder' => 'Enter first name',
+                            'class' => 'field-input'
                         ]
                     ]
                 ],
                 'last_name' => [
-                    'label' => 'Name',
+                    'label' => 'Last Name',
                     'type' => 'text',
                     'validators' => [
                         'validate_field_not_empty',
                     ],
                     'extra' => [
                         'attr' => [
-                            'placeholder' => 'Enter your full name',
+                            'placeholder' => 'Enter last name',
+                            'class' => 'field-input'
                         ]
                     ]
                 ],
@@ -45,6 +47,7 @@ class RegisterForm extends Form
                     'extra' => [
                         'attr' => [
                             'placeholder' => 'Enter email',
+                            'class' => 'field-input'
                         ]
                     ]
                 ],
@@ -57,18 +60,33 @@ class RegisterForm extends Form
                     'extra' => [
                         'attr' => [
                             'placeholder' => 'Enter password',
+                            'class' => 'field-input'
                          ]
                     ]
                 ],
-                'password_repeat' => [
-                    'label' => 'Password Repeat',
-                    'type' => 'password',
+                'phone_number' => [
+                    'label' => 'Phone Number',
+                    'type' => 'number',
                     'validators' => [
                         'validate_field_not_empty',
                     ],
                     'extra' => [
                         'attr' => [
-                            'placeholder' => 'Repeat password',
+                            'placeholder' => 'Phone Number',
+                            'class' => 'field-input'
+                        ]
+                    ]
+                ],
+                'address' => [
+                    'label' => 'Home Address',
+                    'type' => 'text',
+                    'validators' => [
+                        'validate_field_not_empty',
+                    ],
+                    'extra' => [
+                        'attr' => [
+                            'placeholder' => 'Your address',
+                            'class' => 'field-input'
                         ]
                     ]
                 ],
