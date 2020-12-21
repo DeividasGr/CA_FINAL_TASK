@@ -10,6 +10,30 @@ class RegisterForm extends Form
     {
         parent::__construct([
             'fields' => [
+                'first_name' => [
+                    'label' => 'Name',
+                    'type' => 'text',
+                    'validators' => [
+                        'validate_field_not_empty',
+                    ],
+                    'extra' => [
+                        'attr' => [
+                            'placeholder' => 'Enter your full name',
+                        ]
+                    ]
+                ],
+                'last_name' => [
+                    'label' => 'Name',
+                    'type' => 'text',
+                    'validators' => [
+                        'validate_field_not_empty',
+                    ],
+                    'extra' => [
+                        'attr' => [
+                            'placeholder' => 'Enter your full name',
+                        ]
+                    ]
+                ],
                 'email' => [
                     'label' => 'Email',
                     'type' => 'text',
@@ -21,18 +45,6 @@ class RegisterForm extends Form
                     'extra' => [
                         'attr' => [
                             'placeholder' => 'Enter email',
-                        ]
-                    ]
-                ],
-                'user_name' => [
-                    'label' => 'Name',
-                    'type' => 'text',
-                    'validators' => [
-                        'validate_field_not_empty',
-                    ],
-                    'extra' => [
-                        'attr' => [
-                            'placeholder' => 'Enter your full name',
                         ]
                     ]
                 ],
