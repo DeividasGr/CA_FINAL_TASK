@@ -56,7 +56,7 @@ class ReviewApiController extends AuthController
     {
         return $row = [
             'id' => $reviews['id'],
-            'name' => $user['user_name'],
+            'name' => $user['first_name'],
             'comment' => $reviews['comment'],
             'timestamp' => $this->timeFormat(time())
         ];

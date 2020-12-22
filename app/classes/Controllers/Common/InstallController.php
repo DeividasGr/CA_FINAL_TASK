@@ -13,8 +13,8 @@ class InstallController
 
         App::$db->createTable('users');
         App::$db->insertRow('users', [
-            'first_name' => 'Test',
-            'last_name' => 'Test',
+            'first_name' => 'Mister',
+            'last_name' => 'TestOne',
             'email' => 'test@test.lt',
             'password' => 'test'
         ]);

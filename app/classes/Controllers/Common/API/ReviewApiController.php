@@ -40,7 +40,7 @@ class ReviewApiController
 
             $row = [
                 'id' => $id,
-                'name' => $user['user_name'],
+                'name' => $user['first_name'],
                 'comment' => $row['comment'],
                 'time' => $row['time']
             ];

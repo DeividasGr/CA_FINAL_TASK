@@ -194,6 +194,10 @@ ul {
     font-size: 20px;
     cursor: pointer;
 }
+.nav-link-active {
+    border-bottom: 3px solid #5f2c82;
+}
+
 
 .nav-link:hover {
     color: #49a09d;

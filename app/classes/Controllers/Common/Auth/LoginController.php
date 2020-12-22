@@ -17,7 +17,7 @@ class LoginController extends GuestController
         parent::__construct();
         $this->form = new LoginForm();
         $this->page = new BasePage([
-            'title' => 'LOGIN'
+            'title' => 'Login'
         ]);
     }
 
@@ -32,7 +32,7 @@ class LoginController extends GuestController
             $clean_inputs = $this->form->values();
             App::$session->login($clean_inputs['email'], $clean_inputs['password']);
             if (App::$session->getUser()) {
-                header('Location: /index');
+                header('Location: /');
                 exit();
             }
         }
