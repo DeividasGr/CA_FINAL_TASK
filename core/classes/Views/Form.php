@@ -75,14 +75,11 @@ class Form extends View
                         $is_valid = false;
                         break;
                     } else {
-                        // Sets field value if was filled correctly
-                        // so user doesnt have to re-enter
                         $field['value'] = $field_value;
                     }
                 }
             }
 
-            // Runs all form-level validators
             foreach ($this->data['validators'] ?? [] as $validator_name => $validator) {
                 if (is_array($validator)) {
                     $field_is_valid = $validator_name($form_values, $this->data, $params = $validator);

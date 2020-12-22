@@ -5,19 +5,6 @@ namespace Core;
 class Router extends \Core\Abstracts\Router
 {
 
-    /**
-     * This is the array where we will add routes, it will look like this:
-     * $this->routes = [
-     *  'login' => [
-     *      'url' => '/users/login',
-     *      'controller_name' => '\App\Controllers\Auth\LoginController',
-     *      'controller_method' => 'index',
-     *  ],
-     *  ...
-     * ]
-     *
-     * @var array
-     */
     protected static  $routes = [];
     /**
      * We will call this as follows:

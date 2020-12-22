@@ -48,16 +48,6 @@ function validate_login(array $filtered_input, array &$form): bool
     return false;
 }
 
-function validate_row_exists(string $field_input, array &$field): bool
-{
-    if (App::$db->rowExists('pizzas', $field_input)) {
-        return true;
-    }
-
-    $field['error'] = 'Tokia eilute neegzistuoja';
-
-    return false;
-}
 
 function validate_user_doesnt_exists(string $field_input, array &$field): bool
 {

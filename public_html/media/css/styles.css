@@ -313,7 +313,9 @@ ul {
         display: block;
         width: 100%;
     }
-
+    .content-container {
+        height: 100%;
+    }
     .content-list {
         width: 80%;
         margin: 0 auto;

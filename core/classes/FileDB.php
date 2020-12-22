@@ -239,8 +239,6 @@ class FileDB
             $found = true;
 
             foreach ($conditions as $condition_id => $condition_value) {
-                // Tikrinam ar eilutės stulpelis $condition_id indeksu
-                // atitinka su $condition_value
                 if ($row[$condition_id] !== $condition_value) {
                     $found = false;
                     break;
@@ -248,7 +246,6 @@ class FileDB
             }
 
             if ($found) {
-                // įdedam rastą eilutę į $results
                 $results[$row_id] = $row;
             }
         }

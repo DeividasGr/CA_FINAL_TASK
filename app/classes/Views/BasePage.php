@@ -45,6 +45,7 @@ class BasePage extends Page
     {
         $this->data['content'] = $content;
     }
+
     public function setFooter($footer): void
     {
         $this->data['footer'] = $footer;
