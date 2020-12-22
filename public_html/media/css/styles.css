@@ -15,6 +15,7 @@ body {
     overflow-x: hidden;
     font-family: 'Roboto', sans-serif;
     background: linear-gradient(45deg, #49a09d, #5f2c82);
+    position: relative;
 }
 
 
@@ -23,6 +24,7 @@ body {
     margin: 50px;
     color: #fff;
     letter-spacing: 5px;
+    text-shadow: 5px 5px #333;
 }
 
 /*######################
@@ -61,10 +63,12 @@ form {
     margin: 50px auto;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
     border-radius: 15px;
+    margin-bottom: 100px;
 }
 
 #review-create-form {
     margin: 25px auto;
+    margin-bottom: 100px;
 }
 
 .textarea {
@@ -192,7 +196,7 @@ ul {
 }
 
 .nav-link:hover {
-    color: black;
+    color: #49a09d;
     transition: 0.4s;
 }
 
@@ -224,16 +228,21 @@ ul {
 }
 
 .main-services {
-    width: 25%;
+    width: calc(800px / 4);
     border: 1px solid lightgrey;
     color: #fff;
     height: 100%;
+    overflow: hidden;
 }
 
 .main-services img {
     width: 100%;
     height: 40%;
     object-fit: cover;
+}
+.main-services img:hover {
+    transform: scale(1.1);
+    transition: all 0.4s;
 }
 
 .main-services h3 {
@@ -252,6 +261,7 @@ ul {
 .map iframe {
     width: 100%;
     height: 300px;
+    margin-bottom: 70px;
 }
 
 /*######################
@@ -265,6 +275,8 @@ ul {
     justify-content: center;
     align-items: center;
     color: #fff;
+    position: absolute;
+    bottom: 0;
 }
 
 /*######################
@@ -316,5 +328,8 @@ ul {
 
     .nav-link {
         font-size: 15px;
+    }
+    form {
+        width: 300px;
     }
 }

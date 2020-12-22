@@ -13,7 +13,7 @@ Router::add('index', '/', \App\Controllers\Common\HomeController::class);
 Router::add('index2', '/index', \App\Controllers\Common\HomeController::class);
 
 // User Routes
-Router::add('about_us', '/about_us', \App\Controllers\Common\ReviewController::class);
+Router::add('feedback', '/feedback', \App\Controllers\Common\ReviewController::class);
 
 // API Routes
 Router::add('api_create', '/api/reviews/create', \App\Controllers\User\API\ReviewApiController::class, 'create');

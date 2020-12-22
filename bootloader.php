@@ -1,4 +1,5 @@
 <?php
+date_default_timezone_set('Europe/Vilnius');
 
 define('ROOT', __DIR__);
 define('DB_FILE', ROOT . '/app/data/db.json');
