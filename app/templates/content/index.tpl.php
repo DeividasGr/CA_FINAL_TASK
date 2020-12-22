@@ -1,9 +1,9 @@
 <section>
-    <div class="header-img"></div>
+    <div class="main-img"></div>
     <h1 class="title"><?php print $data['title'] ?></h1>
-    <div class="content-container">
-        <div class="flex-box">
-            <div class="content-list">
+    <div class="main-container">
+        <div class="main-services-box">
+            <div class="main-services">
                 <img src="/media/images/gym.jpg" alt="image about gym">
                 <h3>Best Gym</h3>
                 <p>
@@ -12,7 +12,7 @@
                     used by the people to do exercises.
                 </p>
             </div>
-            <div class="content-list">
+            <div class="main-services">
                 <img src="/media/images/spa.jpg" alt="image about spa">
                 <h3>Sauna after training</h3>
                 <p>
@@ -21,7 +21,7 @@
                     The steam and high heat make the bathers perspire.
                 </p>
             </div>
-            <div class="content-list">
+            <div class="main-services">
                 <img src="/media/images/bar.jpg" alt="image about bar">
                 <h3>Replenish your strength</h3>
                 <p>

@@ -21,6 +21,8 @@ body {
 .title {
     font-size: 50px;
     margin: 50px;
+    color: #fff;
+    letter-spacing: 5px;
 }
 
 /*######################
@@ -35,6 +37,7 @@ table {
 }
 
 tr, td, th {
+    width: 200px;
     padding: 15px;
     color: #fff;
     word-wrap: break-word;
@@ -72,10 +75,6 @@ form p {
     font-weight: bold;
     margin-bottom: 10px;
     color: #fff;
-}
-
-label {
-
 }
 
 .field-input {
@@ -134,21 +133,6 @@ button:hover {
     transition: all 0.4s;
 }
 
-.modal {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #333;
-}
-
-.modal .close {
-    color: white;
-    font-size: 50px;
-    cursor: pointer;
-}
-
 .error {
     color: darkred;
     font-size: 15px;
@@ -203,7 +187,7 @@ ul {
     color: white;
     background-color: #333;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 20px;
     cursor: pointer;
 }
 
@@ -216,7 +200,7 @@ ul {
 /*######################
 ##  Index Page
 ########################*/
-.header-img {
+.main-img {
     background-image: url('/media/images/header.jpg');
     background-size: cover;
     background-position: center;
@@ -226,38 +210,38 @@ ul {
     opacity: 0.2;
 }
 
-.content-container {
+.main-container {
     max-width: 800px;
     margin: 20px auto;
     height: 400px;
 }
 
-.flex-box {
+.main-services-box {
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 100%;
 }
 
-.content-list {
+.main-services {
     width: 25%;
     border: 1px solid lightgrey;
     color: #fff;
     height: 100%;
 }
 
-.content-list img {
+.main-services img {
     width: 100%;
     height: 40%;
     object-fit: cover;
 }
 
-.content-list h3 {
+.main-services h3 {
     text-align: center;
     margin: 10px 5px;
 }
 
-.content-list p {
+.main-services p {
     text-align: center;
     margin: 0 5px;
 }
@@ -305,28 +289,31 @@ ul {
 }
 
 @media only screen and (max-width: 400px) {
-    .header-img {
+    .main-img {
         height: 150px;
     }
 
-    .flex-box {
+    .main-services-box {
         display: block;
         width: 100%;
     }
-    .content-container {
+
+    .main-container {
         height: 100%;
     }
-    .content-list {
+
+    .main-services {
         width: 80%;
         margin: 0 auto;
         margin-bottom: 20px;
         height: auto;
     }
 
-    .content-list img {
+    .main-services img {
         width: 100%;
         height: 100px;
     }
+
     .nav-link {
         font-size: 15px;
     }
