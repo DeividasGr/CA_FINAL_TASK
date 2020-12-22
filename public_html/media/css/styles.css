@@ -230,16 +230,20 @@ ul {
     max-width: 800px;
     margin: 20px auto;
     height: 400px;
+}
+
+.flex-box {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    height: 100%;
 }
 
 .content-list {
-    height: 100%;
     width: 25%;
-    border: 1px solid #fff;
+    border: 1px solid lightgrey;
     color: #fff;
+    height: 100%;
 }
 
 .content-list img {
@@ -298,4 +302,30 @@ ul {
 .nonuser-review a:hover {
     color: #49a09d;
     transition: all 0.4s;
+}
+
+@media only screen and (max-width: 400px) {
+    .header-img {
+        height: 150px;
+    }
+
+    .flex-box {
+        display: block;
+        width: 100%;
+    }
+
+    .content-list {
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        height: auto;
+    }
+
+    .content-list img {
+        width: 100%;
+        height: 100px;
+    }
+    .nav-link {
+        font-size: 15px;
+    }
 }
