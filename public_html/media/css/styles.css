@@ -154,6 +154,12 @@ button:hover {
     font-size: 15px;
 }
 
+.field-error {
+    color: darkred;
+    font-size: 15px;
+    display: block;
+}
+
 /*######################
 ##  Navigation
 ########################*/
@@ -288,6 +294,7 @@ ul {
     text-decoration: none;
     color: #fff;
 }
+
 .nonuser-review a:hover {
     color: #49a09d;
     transition: all 0.4s;

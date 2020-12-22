@@ -189,3 +189,15 @@ function validate_name_length(string $field_value, array &$field)
     return true;
 
 }
+
+function validate_textarea_length(string $field_value, array &$field)
+{
+    if (strlen($field_value) > 500) {
+        $field['error'] = 'Too many symbols - use up to 500';
+
+        return false;
+    }
+
+    return true;
+
+}
