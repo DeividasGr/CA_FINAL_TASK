@@ -5,7 +5,7 @@
 [![Build Status][ico-travis]][link-travis]
 
 
-###### Pizzeria based on PHP-OOP and API
+###### Gym Web Page based on PHP-OOP and API
 
 ## Installation
 
